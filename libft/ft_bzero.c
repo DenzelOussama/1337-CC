@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 12:02:13 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/13 12:20:09 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/10/15 09:55:53 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void ft_bzero(void *s, size_t n)
 {
 	unsigned char	*p;
-	int	i;
+	size_t	i;
 	
 	i = 0;
 	p = (unsigned char *)s;
