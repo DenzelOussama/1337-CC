@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 21:31:08 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/16 11:55:23 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/10/17 15:22:27 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 // int main(void)
 
-char d={'a','b','c',}
+// char d={'a','b','c',}
 // {
 //     char d[9] = "hello";
 //     const char *s = " world welcome to wonderland";
