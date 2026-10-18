@@ -6,13 +6,13 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 11:02:24 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/17 11:30:08 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/10/18 11:43:45 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strrchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
 	size_t i;
 	char *ptr;

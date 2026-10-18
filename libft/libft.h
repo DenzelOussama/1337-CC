@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 09:41:23 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/17 16:17:45 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/10/18 12:10:48 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <string.h>
-
+#include <stdlib.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -37,5 +37,6 @@ int ft_strncmp(const char *s1, const char *s2, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strnstr(const char *big, const char *little, size_t len);
+int atoi(const char *nptr);
 
 #endif
