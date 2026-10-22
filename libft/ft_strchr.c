@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 10:47:47 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/16 22:46:18 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/10/21 17:58:38 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,13 @@ char *ft_strchr(const char *s, int c)
 
     while (*s != '\0')
     {
-        if (*s == c)
+        if (*s == (char)c)
             return ((char *)s);
         s++;
     }
-    if (*s == '\0')
+    if ((char)c == '\0')
     {
         return((char *)s);
     }
     return(NULL);
-
 }
