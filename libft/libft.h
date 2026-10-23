@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 09:41:23 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/21 17:58:28 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/10/23 13:27:11 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <limits.h>
 
 int ft_isalpha(int c);
 int ft_isdigit(int c);
@@ -41,5 +42,5 @@ int ft_atoi(const char *nptr);
 char    *ft_strjoin(char const *s1, char const *s2);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 char    *ft_strtrim(char const *s1, char const *set);
-
+char *ft_itoa(int n);
 #endif
