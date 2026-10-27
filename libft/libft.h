@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 09:41:23 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/26 14:20:20 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/10/27 12:27:38 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ char				*ft_strrchr(const char *s, int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-char				*ft_strnstr(const char *big, const char *little,
-						size_t len);
+char				*ft_strnstr(const char *big, const char *little, size_t len);
 int					ft_atoi(const char *nptr);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
@@ -60,4 +59,5 @@ void				ft_lstadd_front(t_list **lst, t_list *new);
 unsigned int		ft_lstsize(t_list *lst);
 t_list				*ft_lstlast(t_list *lst);
 void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
 #endif
