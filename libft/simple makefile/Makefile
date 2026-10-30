@@ -5,6 +5,8 @@
 
 all : abcd
 
+files := a.c b.c c.c d.c main.c
+
 abcd : main.o a.o b.o c.o d.o changetonum.o
 	cc main.o a.o b.o c.o d.o changetonum.o -o abcd
 
