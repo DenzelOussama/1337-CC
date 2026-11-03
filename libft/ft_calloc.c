@@ -6,13 +6,13 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 13:41:37 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/18 15:04:49 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/02 12:05:49 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t nmemb, size_t size)
+void *ft_calloc(size_t nmemb, size_t size)//nmeb elements, sizeof(size) each
 {
     void *p;
     size_t	count;
@@ -24,4 +24,28 @@ void *ft_calloc(size_t nmemb, size_t size)
         return (NULL);
     ft_bzero(p,count);
     return (p);
+}
+int main(void)
+{
+	int i =0;
+	// unsigned char *b;
+	// int *p;
+	// p = ft_calloc(15,1);
+	// b = (unsigned char *)p;
+	struct players{
+		char *f_name;
+		char *l_name;
+		int id;
+		int age ;
+	};
+	unsigned char *p = ft_calloc(4,sizeof(struct players));
+	int size = sizeof(struct players);
+	// printf("%d",size);
+	while(i<4*size)
+	{
+		printf("%d:%c\n",i , p[i]);
+		i++;
+	}
+	free(p);
+	return(0);
 }
