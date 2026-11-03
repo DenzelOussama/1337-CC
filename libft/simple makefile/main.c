@@ -2,7 +2,8 @@
 
 int main(int argc, char **argv)
 {
-
+	if (argc <= 1)
+		return(0);
 	int x = changetonum(argv[1]);
 	int y = changetonum(argv[2]);
 

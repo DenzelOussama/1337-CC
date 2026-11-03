@@ -2,6 +2,7 @@
 # define G_H 
 
 #include <stdio.h>
+#include <stdlib.h>
 int changetonum(const char *nptr);
 int a(int x,int y);
 int b(int x,int y);

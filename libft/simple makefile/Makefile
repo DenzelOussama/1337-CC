@@ -2,26 +2,23 @@
 
 #target : dependencies
 #action
+NAME = abcd
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+SRC = a.c b.c c.c d.c changetonum.c main.c
+OBJ = $(SRC:.c=.o)
+all : $(NAME)
 
-all : abcd
+$(NAME) : $(OBJ)
+	$(CC) $(CFLAGS) $^ -o $(NAME)
 
-files := a.c b.c c.c d.c main.c
+%.o : %.c g.h
+	 $(CC) $(CFLAGS) -c $< -o $@
 
-abcd : main.o a.o b.o c.o d.o changetonum.o
-	cc main.o a.o b.o c.o d.o changetonum.o -o abcd
+clean : 
+	rm -f $(OBJ)
+re : fclean all
 
-changetonum.o : changetonum.c
-	cc -c changetonum.c
-main.o : main.c
-	cc -c main.c 
-a.o : a.c g.h
-	cc -c a.c
-b.o : b.c g.h
-	cc -c b.c
-c.o : c.c g.h
-	cc -c c.c
-d.o : c.c g.h
-	cc -c d.c
-
-clear : 
-	rm *.o abcd
+fclean: clean
+	rm -f $(NAME)
+.PHONY : all clean fclean re
