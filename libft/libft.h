@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 09:41:23 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/03 15:54:37 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/04 16:13:20 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+
+#define NUUUL (void *)0;
 typedef struct s_list
 {
 	void			*content;

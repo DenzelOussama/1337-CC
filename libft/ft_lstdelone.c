@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 11:49:10 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/01 16:37:42 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/04 23:06:45 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst)
 		return ;
-	del(lst->content);
+	if(del)
+		del(lst->content);
 	// if (!(lst->content))
 	// 	printf("the content have been freed");
 	free(lst);
