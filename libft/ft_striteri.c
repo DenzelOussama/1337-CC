@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 11:04:01 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/24 11:50:38 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/06 10:31:05 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-void	testingfunction(unsigned int i, char *c)
-{
-	*c ='x';
-	return;
+// void	testingfunction(unsigned int i, char *c)
+// {
+// 	*c ='x';
+// 	return;
 
-}
-int	main(void)
-{
-	char	s[6]="hello";
-	ft_striteri(s,testingfunction);
-	printf("%s",s);
-	return (0);
-}
+// }
+// int	main(void)
+// {
+// 	char	s[6]="hello";
+// 	ft_striteri(s,testingfunction);
+// 	printf("%s",s);
+// 	return (0);
+// }

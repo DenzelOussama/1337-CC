@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 11:49:10 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/04 23:06:45 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/06 10:32:08 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,28 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst)
 		return ;
-	if(del)
+	if (del)
 		del(lst->content);
 	// if (!(lst->content))
 	// 	printf("the content have been freed");
 	free(lst);
 }
 
-int	main(void)
-{
-	t_list *head;
-	t_list *firstnode = ft_lstnew("this is the first node");
-	t_list *secondnode = ft_lstnew("this is the second node");
-	t_list *thirdnode = ft_lstnew("this is the third node");
-	t_list *fourthnode = ft_lstnew("this is the fourth node");
+// int	main(void)
+// {
+// 	t_list *head;
+// 	t_list *firstnode = ft_lstnew("this is the first node");
+// 	t_list *secondnode = ft_lstnew("this is the second node");
+// 	t_list *thirdnode = ft_lstnew("this is the third node");
+// 	t_list *fourthnode = ft_lstnew("this is the fourth node");
 
-	head = firstnode;
-	firstnode->next = secondnode;
-	firstnode->content = "jeri6jsoitin ";
-	secondnode->next = thirdnode;
-	thirdnode->next = fourthnode;
-	printf("%s\n", (char *)firstnode->content);
+// 	head = firstnode;
+// 	firstnode->next = secondnode;
+// 	firstnode->content = "jeri6jsoitin ";
+// 	secondnode->next = thirdnode;
+// 	thirdnode->next = fourthnode;
+// 	printf("%s\n", (char *)firstnode->content);
 
-	ft_lstdelone(firstnode, del(firstnode->content));
-	return (0);
-}
+// 	ft_lstdelone(firstnode, del(firstnode->content));
+// 	return (0);
+// }

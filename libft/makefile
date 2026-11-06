@@ -19,11 +19,11 @@ OBJS = $(SRCS:.c=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	ar rcs $(NAME) $<
+	ar rcs $(NAME) $(OBJS)
 %.o : %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-clean : $(OBJS)
+clean :
 	rm -f $(OBJS)
 
 fclean : clean
