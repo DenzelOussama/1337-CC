@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 23:28:41 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/06 10:33:38 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/08 23:28:47 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	void	*content;
 
 	new_head = NULL;
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	while (lst)
 	{
@@ -27,7 +27,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_node = ft_lstnew(content);
 		if (!new_node)
 		{
-			del(content);
+			if (del)
+				del(content);
 			ft_lstclear(&new_head, del);
 			return (NULL);
 		}

@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 11:04:01 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/06 10:31:05 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/08 20:57:54 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 // void	testingfunction(unsigned int i, char *c)
 // {
 // 	*c ='x';
-// 	return;
+// 	return ;
 
 // }
 // int	main(void)

@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 21:31:08 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/17 15:22:27 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/08 22:33:42 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	slen = ft_strlen(src);
 	dlen = 0;
 	while (dlen < size && dst[dlen] != '\0')
-	{
 		dlen++;
-	}
 	if (size <= dlen)
-	{
 		return (size + slen);
-	}
-	i = 0 ;
+	i = 0;
 	while (src[i] != '\0' && dlen + i + 1 < size)
 	{
 		dst[dlen + i] = src[i];

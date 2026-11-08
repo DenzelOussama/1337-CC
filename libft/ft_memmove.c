@@ -1,51 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove2.c                                      :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 10:43:37 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/14 12:20:54 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/08 21:26:26 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 #include "libft.h"
 
-static void	helper(unsigned char *d, const unsigned char *s, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	if (s < d)
-	{
-		while (i < n)
-		{
-			d[n - 1 - i] = s[n - 1 - i];
-			i++;
-		}
-	}
-	else
-	{
-		while (i < n)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
-}
-
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
 
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
 	if (!dest && !src)
 		return (NULL);
-	helper(d, s, n);
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (d > s)
+	{
+		while (n--)
+			d[n] = s[n];
+	}
+	else
+	{
+		while (n--)
+		{
+			*d = *s;
+			d++;
+			s++;
+		}
+	}
 	return (dest);
 }
 

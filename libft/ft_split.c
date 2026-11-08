@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 17:59:58 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/28 11:15:53 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/08 20:43:42 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,25 +52,24 @@ static char	**ft_store_word(const char *st, char c, char **str, int n)
 {
 	size_t	i;
 	int		j;
-	size_t	start;
 	size_t	len;
 
-	(1) && (i = 0, start = 0, len = 0, j = 0);
+	i = 0;
+	j = 0;
 	while (st[i] && j < n)
 	{
 		while (st[i] && st[i] == c)
 			i++;
 		if (!st[i])
 			break ;
-		start = i;
-		len = ft_len_of_word(st, start, c);
-		i = start + len;
-		str[j] = ft_substr(st, start, len);
+		len = ft_len_of_word(st, i, c);
+		str[j] = ft_substr(st, i, len);
 		if (!str[j])
 		{
 			ft_free(str, j);
 			return (NULL);
 		}
+		i += len;
 		j++;
 	}
 	str[j] = NULL;
@@ -90,9 +89,6 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (ft_store_word(s, c, str, words));
 }
-
-char *s = "shsdhsdc, dshdihs ,sd skhdsk,ds"
-
 
 // static void	test_split(char const *str, char c)
 // {
@@ -150,34 +146,34 @@ char *s = "shsdhsdc, dshdihs ,sd skhdsk,ds"
 // 	return (0);
 // }
 
-int    main(void)
-{
-    char *in[] = {"hello world", "  hello   world  ", "hello", "", "     ",
-        "a,b,,c", ",,,a,,,", "a"};
-    char sep[] = {' ', ' ', ' ', ' ', ' ', ',', ',', 'a'};
-    int words[] = {2, 2, 1, 0, 0, 3, 1, 0};
-    char **r;
-    int t;
-    int i;
+// int	main(void)
+// {
+// 	char	*in[] = {"hello world", "  hello   world  ", "hello", "", "     ",
+// 			"a,b,,c", ",,,a,,,", "a"};
+// 	char	sep[] = {' ', ' ', ' ', ' ', ' ', ',', ',', 'a'};
+// 	int		words[] = {2, 2, 1, 0, 0, 3, 1, 0};
+// 	char	**r;
+// 	int		t;
+// 	int		i;
 
-    t = 0;
-    while (t < 8)
-    {
-        r = ft_split(in[t], sep[t]);
-        i = 0;
-        while (r && r[i])
-            i++;
-        printf("%d: %s (got %d words, expected %d)\n", t + 1, (r
-                && i == words[t]) ? "worked" : "NOT worked", i, words[t]);
-        i = 0;
-        while (r && r[i])
-            free(r[i++]);
-        free(r);
-        t++;
-    }
-    printf("9: %s\n", ft_split(NULL, ' ') == NULL ? "worked" : "NOT worked");
-    return (0);
-}
+// 	t = 0;
+// 	while (t < 8)
+// 	{
+// 		r = ft_split(in[t], sep[t]);
+// 		i = 0;
+// 		while (r && r[i])
+// 			i++;
+// 		printf("%d: %s (got %d words, expected %d)\n", t + 1, (r
+// 				&& i == words[t]) ? "worked" : "NOT worked", i, words[t]);
+// 		i = 0;
+// 		while (r && r[i])
+// 			free(r[i++]);
+// 		free(r);
+// 		t++;
+// 	}
+// 	printf("9: %s\n", ft_split(NULL, ' ') == NULL ? "worked" : "NOT worked");
+// 	return (0);
+// }
 // char **strs = {hello,scnuch,vsv};
 // char c = ',';
 // output = helloscnuchvsv;

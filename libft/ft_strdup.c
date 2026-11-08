@@ -6,18 +6,18 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 12:27:06 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/18 13:41:13 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/08 20:45:16 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	size_t	len;
 	size_t	i;
-	char *p;
-	
+	char	*p;
+
 	len = ft_strlen(s);
 	p = (char *)malloc(sizeof(char) * len + 1);
 	if (!p)
@@ -43,12 +43,13 @@ char *ft_strdup(const char *s)
 //         printf("Malloc failed!\n");
 //         return (1);
 //     }
-    
+
 //     printf("Original: %s\n", original);
 //     printf("Duplicate: %s\n", duplicate);
 
-//     // If you delete this next line, Valgrind will scream at you for a memory leak!
-//     free(duplicate); 
+//     // If you delete this next line,
+// Valgrind will scream at you for a memory leak!
+//     free(duplicate);
 
 //     return (0);
 // }
