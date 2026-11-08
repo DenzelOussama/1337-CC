@@ -16,31 +16,31 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if (!lst || !new)//check if adresses given are not NULL
-		return;
-	if (*lst == NULL)//*lst checks if the list empty, aka head points at NULL
+	if (!lst || !new)
+		return ;
+	if (*lst == NULL)
 	{
-		*lst = new;// then we make the new list our first node
-		return;
+		*lst = new;
+		return ;
 	}
-	last = ft_lstlast(*lst);//find last node
+	last = ft_lstlast(*lst);
 	last->next = new;
-	printf("%s\n", (char *)new->content);
 }
-int	main(void)
-{
-	t_list *head ;
-	t_list *firstnode = NULL;
-	t_list *secondnode = ft_lstnew("this is the second node");
-	t_list *thirdnode = ft_lstnew("this is the third node");
-	t_list *fourthnode = ft_lstnew("this is the fourth node");
 
-	head = secondnode;
-	// firstnode->next = secondnode;
-	secondnode->next = thirdnode;
-	thirdnode->next = fourthnode;
-	// printf("%s\n", (char *)firstnode->content);
+// int	main(void)
+// {
+// 	t_list *head ;
+// 	t_list *firstnode = NULL;
+// 	t_list *secondnode = ft_lstnew("this is the second node");
+// 	t_list *thirdnode = ft_lstnew("this is the third node");
+// 	t_list *fourthnode = ft_lstnew("this is the fourth node");
 
-	ft_lstadd_back(&head, firstnode);
-	return (0);
-}
+// 	head = secondnode;
+// 	// firstnode->next = secondnode;
+// 	secondnode->next = thirdnode;
+// 	thirdnode->next = fourthnode;
+// 	// printf("%s\n", (char *)firstnode->content);
+
+// 	ft_lstadd_back(&head, firstnode);
+// 	return (0);
+// }

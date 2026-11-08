@@ -20,18 +20,18 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	*lst = new;
 }
 
-int	main(void)
-{
-	t_list *first_node;
-	first_node = ft_lstnew("this is the first node");
-	t_list *head =ft_lstnew("this is the head");
-	head = first_node;
-	t_list *new = ft_lstnew("this is the new node");
-	// printf("old head %p\n", head);
-	// printf("first node %p\n", head->next);
+// int	main(void)
+// {
+// 	t_list *first_node;
+// 	first_node = ft_lstnew("this is the first node");
+// 	t_list *head =ft_lstnew("this is the head");
+// 	head = first_node;
+// 	t_list *new = ft_lstnew("this is the new node");
+// 	// printf("old head %p\n", head);
+// 	// printf("first node %p\n", head->next);
 
-	ft_lstadd_front(&head, new);
+// 	ft_lstadd_front(&head, new);
 
-	printf("first node %p\n", head->next);
-	return (0);
-}
+// 	printf("first node %p\n", head->next);
+// 	return (0);
+// }

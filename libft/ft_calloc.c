@@ -27,27 +27,27 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(p, count);
 	return (p);
 }
-int main(void)
-{
-	int i =0;
-	// unsigned char *b;
-	// int *p;
-	// p = ft_calloc(15,1);
-	// b = (unsigned char *)p;
-	struct players{
-		char *f_name;
-		char *l_name;
-		int id;
-		int age ;
-	};
-	unsigned char *p = ft_calloc(0,sizeof(struct players));
-	int size = sizeof(struct players);
-	// printf("%d",size);
-	while(i<4*size)
-	{
-		printf("%d:%d\n",i , p[i]);
-		i++;
-	}
-	free(p);
-	return(0);
-}
+// int main(void)
+// {
+// 	int i =0;
+// 	// unsigned char *b;
+// 	// int *p;
+// 	// p = ft_calloc(15,1);
+// 	// b = (unsigned char *)p;
+// 	struct players{
+// 		char *f_name;
+// 		char *l_name;
+// 		int id;
+// 		int age ;
+// 	};
+// 	unsigned char *p = ft_calloc(0,sizeof(struct players));
+// 	int size = sizeof(struct players);
+// 	// printf("%d",size);
+// 	while(i<4*size)
+// 	{
+// 		printf("%d:%d\n",i , p[i]);
+// 		i++;
+// 	}
+// 	free(p);
+// 	return(0);
+// }

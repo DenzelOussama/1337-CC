@@ -11,15 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-static size_t	ft_count_numbers(long long nb)
+static int	ft_count_numbers(long long nb)
 {
-	size_t	count;
+	int	count;
 
 	count = 0;
 	if (nb <= 0)

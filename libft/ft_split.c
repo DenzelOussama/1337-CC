@@ -91,6 +91,9 @@ char	**ft_split(char const *s, char c)
 	return (ft_store_word(s, c, str, words));
 }
 
+char *s = "shsdhsdc, dshdihs ,sd skhdsk,ds"
+
+
 // static void	test_split(char const *str, char c)
 // {
 // 	char	**result;

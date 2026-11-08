@@ -18,8 +18,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 		return ;
 	if (del)
 		del(lst->content);
-	// if (!(lst->content))
-	// 	printf("the content have been freed");
 	free(lst);
 }
 
