@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 16:00:02 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/17 16:15:45 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:50:12 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-// int main(void)
-// {
-// 	printf("this is ft_memcmp: %d\n",
-// ft_memcmp("wasup yall ggs","wasup yacll ggs",40));
-// 	printf("this is memcmp:    %d\n",
-// memcmp("wasup yall ggs","wasup yacll ggs",40));
-// 	return(0);
-// }

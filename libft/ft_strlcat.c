@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 21:31:08 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/08 22:33:42 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:51:26 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dlen + i] = '\0';
 	return (dlen + slen);
 }
-
-// int main(void)
-
-// char d={'a','b','c',}
-// {
-//     char d[9] = "hello";
-//     const char *s = " world welcome to wonderland";
-//     printf("strkcat result is :%zd\n\n",ft_strlcat(d,s,10));
-//     size_t i = 0 ;
-//     while (i < sizeof(d) && d[i] != '\0')
-//     {
-//         printf("%c",d[i]);
-//         i++;
-//     }
-//     printf("\n");
-//     return(0);
-// }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back2.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 21:46:24 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/27 11:42:14 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:48:48 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*last;
-
 	if (!lst || !new)
 		return ;
 	if (*lst == NULL)
@@ -23,24 +21,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	last = ft_lstlast(*lst);
-	last->next = new;
+	ft_lstlast(*lst)->next = new;
 }
-
-// int	main(void)
-// {
-// 	t_list *head ;
-// 	t_list *firstnode = NULL;
-// 	t_list *secondnode = ft_lstnew("this is the second node");
-// 	t_list *thirdnode = ft_lstnew("this is the third node");
-// 	t_list *fourthnode = ft_lstnew("this is the fourth node");
-
-// 	head = secondnode;
-// 	// firstnode->next = secondnode;
-// 	secondnode->next = thirdnode;
-// 	thirdnode->next = fourthnode;
-// 	// printf("%s\n", (char *)firstnode->content);
-
-// 	ft_lstadd_back(&head, firstnode);
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 09:50:12 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/28 21:53:29 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:49:36 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,3 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
-
-// int	main(void)
-// {
-// 	t_list *first_node;
-// 	first_node = ft_lstnew("this is the first node");
-// 	t_list *head =ft_lstnew("this is the head");
-// 	head = first_node;
-// 	t_list *new = ft_lstnew("this is the new node");
-// 	// printf("old head %p\n", head);
-// 	// printf("first node %p\n", head->next);
-
-// 	ft_lstadd_front(&head, new);
-
-// 	printf("first node %p\n", head->next);
-// 	return (0);
-// }

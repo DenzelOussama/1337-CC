@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 12:27:06 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/08 20:45:16 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:51:09 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,25 +31,3 @@ char	*ft_strdup(const char *s)
 	p[i] = '\0';
 	return (p);
 }
-
-// int main(void)
-// {
-//     char *original = "1337 Rabat";
-//     char *duplicate;
-
-//     duplicate = ft_strdup(original);
-//     if (!duplicate)
-//     {
-//         printf("Malloc failed!\n");
-//         return (1);
-//     }
-
-//     printf("Original: %s\n", original);
-//     printf("Duplicate: %s\n", duplicate);
-
-//     // If you delete this next line,
-// Valgrind will scream at you for a memory leak!
-//     free(duplicate);
-
-//     return (0);
-// }

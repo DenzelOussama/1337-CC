@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 15:29:40 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/08 22:31:41 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:51:21 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcat(p, s2, count);
 	return (p);
 }
-
-// int	main(void)
-// {
-// 	char *r;
-// 	printf("%p\n", r = ft_strjoin(NULL, " how tf we doing man hehe"));
-// 	// char *str;
-// 	// str = s;
-// 	// printf("%s\n",ft_strjoin(str,NULL));
-// 	// if (!str)
-// 	// 	return (0);
-// 	return (0);
-// }

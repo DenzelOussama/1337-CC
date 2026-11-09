@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 10:32:58 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/08 23:16:55 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:51:58 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,66 +32,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, &s1[start], end - start + 1);
 	return (str);
 }
-// int main(void)
-// {
-//     char *res;
-
-//     res = ft_strtrim("   hello world   ", " ");
-// // expected output: "hello world"
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("xxzzyhello worldyyzzxx", "xyz");
-// // expected output: "hello world"
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("   hello world", " ");
-// // expected output: "hello world"
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("hello world   ", " ");
-// // expected output: "hello world"
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("hello world", " ");
-// // expected output: "hello world"
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("xxxxx", "x");
-// // expected output: ""
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("xyzxyzxyz", "xyz"); // expected output: ""
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("", "x"); // expected output: ""
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("hello world", "");
-// // expected output: "hello world"
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("", ""); // expected output: ""
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("xhelloxworldx", "x");
-// // expected output: "helloxworld"
-//     printf("%s\n", res);
-//     free(res);
-
-//     res = ft_strtrim("\t\n  hello 42 \t\n", " \n\t");
-// // expected output: "hello 42"
-//     printf("%s\n", res);
-//     free(res);
-
-//     return (0);
-// }

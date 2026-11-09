@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/23 23:23:36 by olgarh            #+#    #+#             */
-/*   Updated: 2026/10/24 11:03:16 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:51:34 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	p[i] = '\0';
 	return (p);
 }
-
-// static char	shift_by_one(unsigned int i, char c)
-// {
-// 	(void)i; // We don't use the index for this specific test
-// 	if (c >= 32 && c <= 126)
-// 		return (c + 1);
-// 	return (c);
-// }
-
-// int	main(void)
-// {
-// 	char *result;
-
-// 	result = ft_strmapi("hello", shift_by_one);
-// 	printf("Result: [%s] | Expected: [ifmmp]\n", result);
-// 	free(result);
-
-// 	return (0);
-// }

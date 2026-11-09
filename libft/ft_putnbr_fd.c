@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 12:18:42 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/08 23:05:28 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:50:26 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 	mod = (nb % 10) + '0';
 	write(fd, &mod, 1);
 }
-
-// int	main(void)
-// {
-// 	ft_putnbr_fd(-7863874, 1);
-// 	printf("\n");
-// 	return (0);
-// }

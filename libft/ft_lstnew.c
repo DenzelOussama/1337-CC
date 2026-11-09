@@ -6,7 +6,7 @@
 /*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/24 23:16:27 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/04 22:25:05 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/09 14:50:00 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_node->next = NULL;
 	return (new_node);
 }
-// typedef struct student
-// {
-// 	char	name[20];
-// 	int		age;
-// 	struct	student* next;
-// };
-// int	main(void)
-// {
-// 	t_list s1 = {"denzel",NULL};
-// 	printf("content:%s, next:%d",s1.content,s1.next);
-// 	return (0);
-// }

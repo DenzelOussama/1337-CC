@@ -20,6 +20,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	ar rc $(NAME) $(OBJS)
+
 %.o : %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
