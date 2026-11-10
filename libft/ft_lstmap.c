@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: olgarh <olgarh@student.1337.ma>            +#+  +:+       +#+        */
+/*   By: olgarh <olgarh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/27 23:28:41 by olgarh            #+#    #+#             */
-/*   Updated: 2026/11/09 16:43:20 by olgarh           ###   ########.fr       */
+/*   Updated: 2026/11/10 14:59:15 by olgarh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -37,46 +38,45 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_head);
 }
-#include <stdio.h>
-void *f_map(void *content)
+void del(void *content)
 {
-    char *str = (char *)content;
-    // Let's append "!" to every string in the list
-    return (ft_strjoin(str, "!"));
+	printf("content called in del\n");
+	// content = NULL;
 }
-
-// 2. The delete function: frees the content when nodes are cleared
-void del_content(void *content)
+void *f(void *s)
 {
-    free(content);
+	*(char *)s = *(char *)s - 32;
+	return(s);
 }
-
 int main(void)
 {
-    t_list *head = NULL;
-    t_list *mapped_list = NULL;
 
-   
-    ft_lstadd_back(&head, ft_lstnew(ft_strdup("Hello")));
-    ft_lstadd_back(&head, ft_lstnew(ft_strdup("1337")));
-    ft_lstadd_back(&head, ft_lstnew(ft_strdup("Rabat")));
+	t_list *n1;
+	t_list *n2;
+	t_list *n3;
+	char s1[]="a";
+	char s2[]="b";
+	char s3[]="c";
+	n1 = ft_lstnew(s1);
+	n2 = ft_lstnew(ft_strdup(s2));
+	n3 = ft_lstnew(ft_strdup(s3));
 
-   
-    mapped_list = ft_lstmap(head, f_map, del_content);
+	n1->next = n2;
+	n2->next = n3;
 
-    // Print the new mapped list
-    t_list *curr = mapped_list;
-    int i = 0;
-    while (curr)
-    {
-        printf("mapped_list[%d] = %s\n", i, (char *)curr->content);
-        curr = curr->next;
-        i++;
-    }
+	
+	t_list *newnode = ft_lstmap(n1,f,del);
+	t_list *s = newnode;
+	while(s)
+	{
+		printf("%s\n",(char *)s->content);
+		s = s->next;
+	}
+	// ft_lstdelone(first_node,del);
+	// free(second_node->content);
+	// 
+	ft_lstclear(&n1,del);
+	ft_lstclear(&newnode,del);
 
-    
-    ft_lstclear(&head, del_content);
-    ft_lstclear(&mapped_list, del_content);
-
-    return (0);
+	return(0);
 }
